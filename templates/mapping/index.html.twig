@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ObjectMapper Examples{% endblock %}
+
+{% block body %}
+    <h1>ObjectMapper Examples</h1>
+
+    <ul>
+        <li><a href="{{ path('app_immutable') }}">Immutable DTO</a></li>
+        <li><a href="{{ path('app_nested') }}">Nested Objects</a></li>
+        <li><a href="{{ path('app_normalizer') }}">Custom Normalizer</a></li>
+        <li><a href="{{ path('app_naming') }}">Naming Convention</a></li>
+        <li><a href="{{ path('app_validation') }}">Validation</a></li>
+        <li><a href="{{ path('app_versioning') }}">Versioning</a></li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,18 @@
+services:
+  # The main application service
+  app:
+    # Use the image we will build from the Dockerfile in the current directory
+    build: .
+    container_name: symfony_objectmapper_app
+    # Set environmental variables for the container
+    environment:
+      TZ: UTC
+      APP_ENV: dev
+    # Expose the default App port
+    ports:
+      - "8080:8080"
+    # Define a dependency on the Redis service
+    # Ensure the container will restart automatically if it fails
+    restart: always
+    volumes:
+      - ./:/data/www

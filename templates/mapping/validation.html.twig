@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Validation Example{% endblock %}
+
+{% block body %}
+    <h1>Validation Example</h1>
+
+    <h2>Invalid DTO</h2>
+    <p>DTO created from invalid data:</p>
+    <pre>{{ dump(dto) }}</pre>
+
+    <h3>Violations:</h3>
+    {% if errors %}
+        <ul>
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No violations.</p>
+    {% endif %}
+
+    <hr>
+
+    <h2>Valid DTO</h2>
+    <p>DTO created from valid data:</p>
+    <pre>{{ dump(dto_valid) }}</pre>
+    <p>Violations count: {{ violations_valid_count }}</p>
+
+
+    <a href="{{ path('app_index') }}">Back to index</a>
+{% endblock %}

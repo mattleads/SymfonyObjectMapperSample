@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Versioning Example{% endblock %}
+
+{% block body %}
+    <h1>Versioning Example</h1>
+
+    <h2>DTO V1</h2>
+    <p>DTO created from V1 data:</p>
+    <pre>{{ dump(dtoV1) }}</pre>
+    <p>Violations count: {{ violationsV1_count }}</p>
+
+    <hr>
+
+    <h2>DTO V2</h2>
+    <p>DTO created from V2 data:</p>
+    <pre>{{ dump(dtoV2) }}</pre>
+    <h3>Violations:</h3>
+    {% if errorsV2 %}
+        <ul>
+            {% for error in errorsV2 %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No violations.</p>
+    {% endif %}
+
+    <a href="{{ path('app_index') }}">Back to index</a>
+{% endblock %}

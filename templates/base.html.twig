@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <style>
+            body { background: #F5F5F5; font-family: sans-serif; }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+            .container { max-width: 800px; margin: 2em auto; padding: 1em; background: #FFF; border-radius: 5px; }
+            pre { background: #EEE; padding: 1em; border-radius: 3px; }
+            a { color: #007BFF; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+    </body>
+</html>
