@@ -11,7 +11,7 @@ final readonly class UserProfileDto
         public string $username,
         #[Map(transform: ['app.transform.map_to_address'])]
         public AddressDto $shippingAddress,
-        #[Map(transform: [' app.transform.map_to_post_collection'])]
+        #[Map(transform: ['app.transform.map_to_post_collection'])]
         public array $posts,
     ) {}
 }

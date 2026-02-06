@@ -26,7 +26,7 @@ final readonly class MapCollectionToObject implements TransformCallableInterface
             if (\is_object($v)) {
                 $values[$k] = $this->objectMapper->map($v, $this->targetClass);
             } else {
-                $values[$k] = (object)$this->objectMapper->map($v);
+                $values[$k] = $this->objectMapper->map((object)$v, $this->targetClass);
             }
         }
         return $values;

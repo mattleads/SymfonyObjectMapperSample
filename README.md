@@ -27,7 +27,7 @@ The application is divided into several routes, each demonstrating a specific us
 ### Instructions
 1.  **Clone the repository:**
     ```bash
-    ggit clone https://github.com/mattleads/SymfonyObjectMapperSample.git
+    git clone https://github.com/mattleads/SymfonyObjectMapperSample.git
     cd SymfonyObjectMapperSample
     ```
 
